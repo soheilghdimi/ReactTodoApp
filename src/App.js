@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import TodoContextProvider from "./reducer/Context/TodoContext";
+import AddForm from "./reducer/AddForm/AddForm";
+import TodoList from "./reducer/TodoList/TodoList";
+import TodoCard from "./reducer/TodoCard/TodoCard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <TodoContextProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path={'/'} element={<TodoList/>}>
+                        {/*<Route index element={<></>}/>*/}
+                        <Route path={'/Add'} element={<AddForm/>}/>
+                    </Route>
+                    <Route path={'todoCards/:id'} element={<TodoCard/>}/>
+                </Routes>
+            </BrowserRouter>
+        </TodoContextProvider>
+    )
 }
 
 export default App;

@@ -1,0 +1,20 @@
+.TodoItems{
+    display: flex !important;
+    justify-content: space-between;
+    border: gray 1px solid;
+    height: 50px;
+    align-items: center;
+    padding: 5px;
+    background-color: #14213b;
+}
+p{
+    margin-bottom: 0;
+}
+.ItemAddButton{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+

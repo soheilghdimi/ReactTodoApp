@@ -1,0 +1,50 @@
+.Container{
+    display: flex;
+    justify-content: center;
+}
+.todoCard {
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin: 10px;
+    padding-top: 0;
+    width: 350px;
+}
+h1{
+    margin: 0;
+}
+.Title{
+    background-color: #c2cad5;
+}
+.name{
+background-color: #e9ebee;
+    width: 348px;
+}
+.name:hover {
+    border-bottom: 5px solid #0e3721;
+    height: 45px;
+    width: 348px;
+    transition: ease 0.5s;
+}
+.formEntry {
+    display: block;
+    margin: 4px auto;
+    padding: 8px;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.5s ease 0s;
+}
+
+.add {
+    width: 150px ;
+    color: white;
+    background-color: #0e3721;
+    font-size: 20px;
+}
+
+.add:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 180px;
+    border-top: 5px solid #0e3750;
+    border-radius: 5%;
+}

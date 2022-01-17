@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: linear-gradient(to bottom right, #e7e08e, #82c3cf);
+    BACKGROUND-REPEAT: NO-REPEAT;
+    BACKGROUND-ATTACHMENT: FIXED;
+}
+.TodoList{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.AddButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.AddButton Button {
+    width: 100px;
+    background-color: rgba(164, 213, 255, 0.4);
+}
+.AddButton Button :hover{
+    width: 100px;
+    background-color: #2a593f;
+}
