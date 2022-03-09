@@ -11,7 +11,6 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path={'/'} element={<TodoList/>}>
-                        {/*<Route index element={<></>}/>*/}
                         <Route path={'/Add'} element={<AddForm/>}/>
                     </Route>
                     <Route path={'todoCards/:id'} element={<TodoCard/>}/>

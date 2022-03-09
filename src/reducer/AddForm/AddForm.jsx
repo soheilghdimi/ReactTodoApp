@@ -12,17 +12,13 @@ const AddForm = () => {
             items: []
         }
     )
-
-
     const navigate = useNavigate()
-
     const handleAddTodo = (e) => {
         e.preventDefault()
         if (todo.name === "" || todo.description === "") {
             alert("please fill the blank")
         } else {
             dispatch({type: "AddTodo", payload: {todo}})
-
             setTodo(
                 {
                     name: '',
@@ -30,44 +26,39 @@ const AddForm = () => {
                 }
             )
         }
-
-
     }
-
     const handleChange = (e) => {
         setTodo({...todo, [e.target.name]: e.target.value})
     }
 
-
     return (
-        <div className="form">
-
-            <div style={{display:"flex",justifyContent:'flex-end'}}>
-                <button onClick={() => navigate('/')}>
-                    <img className={"DeleteBtn"} src="https://img.icons8.com/fluency/48/000000/delete-sign.png" alt={'DeleteButton'}/>
-                </button>
+        <div style={{
+            display:'flex',
+            justifyContent:'center'}}>
+            <div className="form">
+                <div style={{display: "flex", justifyContent: 'flex-end'}}>
+                    <button onClick={() => navigate('/')}>
+                        <img className={"DeleteBtn"} src="https://img.icons8.com/fluency/48/000000/delete-sign.png"
+                             alt={'DeleteButton'}/>
+                    </button>
+                </div>
+                <form onSubmit={handleAddTodo}>
+                    <div className="input-container ic1">
+                        <input className="input" onChange={handleChange} id='name' name={'name'}
+                               value={todoList.name}/>
+                        <div className="cut">{}</div>
+                        <label className="placeholder">name</label>
+                    </div>
+                    <div className="input-container ic2">
+                        <input className="input" onChange={handleChange} id='description' name={'description'}
+                               value={todoList.description}/>
+                        <div className="cut">{}</div>
+                        <label className="placeholder">description</label>
+                    </div>
+                    <button type="text" className="submit">submit</button>
+                </form>
             </div>
-
-            <form onSubmit={handleAddTodo}>
-
-                <div className="input-container ic1">
-                    <input className="input" onChange={handleChange} id='name' name={'name'}
-                           value={todoList.name}/>
-                    <div className="cut"></div>
-                    <label className="placeholder">name</label>
-                </div>
-
-                <div className="input-container ic2">
-                    <input className="input" onChange={handleChange} id='description' name={'description'}
-                           value={todoList.description}/>
-                    <div className="cut"></div>
-                    <label className="placeholder">description</label>
-                </div>
-                <button type="text" className="submit">submit</button>
-            </form>
-
         </div>
     )
 }
-
 export default AddForm;
