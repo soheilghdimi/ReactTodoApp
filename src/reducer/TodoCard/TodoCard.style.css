@@ -7,8 +7,8 @@
 .todoCard {
     margin: 10px;
     padding-top: 0;
-    width: 950px;
     color: #DFCCF0;
+    width: 85vw;
 }
 h1{
     margin: 0;
@@ -20,7 +20,7 @@ h1{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 1100px;
+    width: 90vw;
     color: rgba(229, 198, 198, 0.96)
 }
 .name{
@@ -30,7 +30,7 @@ background-color: #e9ebee;
 .name:hover {
     border-bottom: 5px solid #0e3721;
     height: 45px;
-    width: 550px;
+    width: 55vw;
     transition: ease 0.5s;
 }
 .FormBox{
@@ -46,7 +46,7 @@ background-color: #e9ebee;
     border-radius: 2px;
     border: 1px solid #d3bbbb;
     transition: all 0.5s ease 0s;
-    width: 500px;
+    width: 50vw;
 }
 .add {
     width: 150px ;

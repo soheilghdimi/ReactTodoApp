@@ -11,7 +11,6 @@ function Reducer(state, action) {
             return (
                 state.filter(todos => todos.id !== payload.id)
             )
-
         case "AddTodoItems":
             return (
                 state.map(item => item.id === payload.id ? {

@@ -13,17 +13,18 @@ function TodoList() {
 
     return (
         <div>
+
             <div className={'AddButton'}>
                 <button onClick={handleAddTodoList}>
                     Add Todo
                 </button>
             </div>
+            <Outlet/>
                 <div className="TodoList">
                     {todoList.map(todo => (
                         <PreviewTodoCard todo={todo} key={todo.id}/>
                     ))}
                 </div>
-            <Outlet/>
         </div>
     )
 }

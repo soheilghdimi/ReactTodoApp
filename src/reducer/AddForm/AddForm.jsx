@@ -19,13 +19,14 @@ const AddForm = () => {
             alert("please fill the blank")
         } else {
             dispatch({type: "AddTodo", payload: {todo}})
-            setTodo(
-                {
-                    name: '',
-                    description: '',
-                }
-            )
         }
+        setTodo(
+            {
+                name: '',
+                description: '',
+                items: [],
+            }
+        )
     }
     const handleChange = (e) => {
         setTodo({...todo, [e.target.name]: e.target.value})
@@ -33,8 +34,9 @@ const AddForm = () => {
 
     return (
         <div style={{
-            display:'flex',
-            justifyContent:'center'}}>
+            display: 'flex',
+            justifyContent: 'center'
+        }}>
             <div className="form">
                 <div style={{display: "flex", justifyContent: 'flex-end'}}>
                     <button onClick={() => navigate('/')}>

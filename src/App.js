@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import TodoContextProvider from "./reducer/Context/TodoContext";
 import AddForm from "./reducer/AddForm/AddForm";
