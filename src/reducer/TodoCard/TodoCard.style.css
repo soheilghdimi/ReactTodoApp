@@ -1,3 +1,8 @@
+.BackBtn{
+    position: absolute;
+    left: 0;
+    margin: 20px;
+}
 .Container{
     display: flex;
     align-items: center;
@@ -8,20 +13,22 @@
     margin: 10px;
     padding-top: 0;
     color: #DFCCF0;
-    width: 85vw;
+    width: 60vw;
 }
 h1{
     margin: 0;
 }
 .Title{
-    margin-top: 5px;
     padding: 10px;
     background-color: #0e3750;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 90vw;
-    color: rgba(229, 198, 198, 0.96)
+    width: 100vw;
+    height: 200px;
+    color: rgba(229, 198, 198, 0.96);
+    position: absolute;
+    z-index: -1;
 }
 .name{
 background-color: #e9ebee;
@@ -36,20 +43,21 @@ background-color: #e9ebee;
 .FormBox{
     background-color: white;
     box-shadow: 1px 1px 5px 5px #888888;
-    margin: 15px;
+    margin-top: 100px;
     padding: 10px;
+    border-radius: 10px;
 }
 .formEntry {
     display: block;
     margin: 4px auto;
     padding: 8px;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 1px solid #d3bbbb;
     transition: all 0.5s ease 0s;
     width: 50vw;
 }
 .add {
-    width: 150px ;
+    width: 130px ;
     color: white;
     background-color: #0e3721;
     font-size: 20px;
@@ -57,7 +65,18 @@ background-color: #e9ebee;
 .add:hover {
     box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
     transform: translateY(-3px);
-    width: 180px;
+    width: 150px;
     border-top: 5px solid #0e3750;
     border-radius: 5%;
+}
+@media only screen and (max-width: 550px) {
+    .todoCard {
+        width: 90vw;
+    }
+    .name{
+        width: 75vw;
+    }
+    .name:hover{
+        width: 80vw;
+    }
 }

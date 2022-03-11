@@ -23,14 +23,11 @@ const PreviewTodoCard = ({todo}) => {
                 backgroundColor: 'rgba(130, 182, 154, 0.2)'
             }}>
                 <Card.Header style={{fontSize: '25px'}}>{todo.name}</Card.Header>
-                <Card.Body>
-                    <Card.Title>{todo.description}</Card.Title>
-                </Card.Body>
+                    <Card.Title style={{margin:"20px"}}>{todo.description}</Card.Title>
             </Card>
             <Link to={`todoCards/${todo.id}`}>
                 <Button variant="outline-secondary">CheckList</Button>
             </Link>
-
         </div>
     )
 }

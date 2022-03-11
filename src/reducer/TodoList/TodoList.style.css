@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 body{
-    background-image: linear-gradient(to bottom right, #e7e08e, #82c3cf);
+    background-image: linear-gradient(to bottom right, rgba(246, 101, 73, 0.85), rgba(88, 189, 203, 0.79));
     BACKGROUND-REPEAT: NO-REPEAT;
     BACKGROUND-ATTACHMENT: FIXED;
 }

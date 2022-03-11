@@ -3,6 +3,8 @@ import {useContext, useEffect, useState} from "react";
 import {TodoContext} from "../Context/TodoContext";
 import TodoItems from "../TodoItems/TodoItems";
 import {useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const TodoCard = () => {
     const {todoList, dispatch} = useContext(TodoContext)
@@ -47,23 +49,26 @@ const TodoCard = () => {
     }, [todoList, params.id])
 
     return (
-        <div className={'Container'}>
+            <div className={'Container'}>
+                    <Link className="BackBtn" to={"/"}>
+                        <ArrowBackIosNewIcon sx={{color:'white',fontSize:"40px"}}/>
+                    </Link>
                 <div className={'Title'}>
                     <h1>{item.name}</h1>
                     <p>{item.description}</p>
                 </div>
-            <div className={'todoCard'}>
-                <div className={'FormBox'}>
-                    <form onSubmit={handleAddTodoItems}>
-                        <input onChange={(e) => handleChangeItems(e)} name={'title'}
-                               value={task.title} className="name formEntry" placeholder={"Add items..."}/>
-                        <button className="add formEntry" >add</button>
-                    </form>
+                <div className={'todoCard'}>
+                    <div className={'FormBox'}>
+                        <form onSubmit={handleAddTodoItems}>
+                            <input onChange={(e) => handleChangeItems(e)} name={'title'}
+                                   value={task.title} className="name formEntry" placeholder={"Add items..."}/>
+                            <button className="add formEntry" >add</button>
+                        </form>
+                    </div>
+                    <TodoItems item={item}/>
                 </div>
-                <TodoItems item={item}/>
-            </div>
 
-        </div>
+            </div>
     )
 }
 

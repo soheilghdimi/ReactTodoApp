@@ -1,16 +1,20 @@
 .TodoItems{
+    margin-top: 10px;
     display: flex !important;
     justify-content: space-between;
-    border: gray 1px solid;
-    height: 50px;
+    height: 55px;
     align-items: center;
-    padding: 5px;
-    background-color: #14213b;
+    padding: 8px;
+    background-color: #f3efed;
+    border-radius: 5px;
+    border: none;
+}
+.TodoItems:hover{
+    opacity: .7;
 }
 p{
     margin-bottom: 0;
 }
-
 
 
 
