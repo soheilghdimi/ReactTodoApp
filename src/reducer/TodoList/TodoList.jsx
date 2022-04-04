@@ -3,6 +3,7 @@ import './TodoList.style.css'
 import {TodoContext} from "../Context/TodoContext";
 import PreviewTodoCard from "../PreviewTodoCard/PreviewTodoCard";
 import {useNavigate,Outlet} from "react-router-dom"
+import {Button} from "@mui/material";
 
 function TodoList() {
     const {todoList} = useContext(TodoContext);
@@ -15,9 +16,9 @@ function TodoList() {
         <div>
 
             <div className={'AddButton'}>
-                <button onClick={handleAddTodoList}>
+                <Button color="success" variant="outlined" onClick={handleAddTodoList}>
                     Add Todo
-                </button>
+                </Button>
             </div>
             <Outlet/>
                 <div className="TodoList">

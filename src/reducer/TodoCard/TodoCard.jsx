@@ -34,12 +34,15 @@ const TodoCard = () => {
     const handleAddTodoItems = (e) => {
         e.preventDefault()
         const id = item.id
+        if (task.title === "") {
+        } else {
         dispatch({type: "AddTodoItems", payload: {id, task}})
         setTask({
             id: '',
             title: "",
             status: false
         })
+    }
     }
     const handleChangeItems = (e) => {
         setTask({...task, [e.target.name]: e.target.value})
@@ -59,10 +62,10 @@ const TodoCard = () => {
                 </div>
                 <div className={'todoCard'}>
                     <div className={'FormBox'}>
-                        <form onSubmit={handleAddTodoItems}>
+                        <form style={{display:"flex"}} onSubmit={handleAddTodoItems}>
                             <input onChange={(e) => handleChangeItems(e)} name={'title'}
                                    value={task.title} className="name formEntry" placeholder={"Add items..."}/>
-                            <button className="add formEntry" >add</button>
+                            <button className="add formEntry" >Add</button>
                         </form>
                     </div>
                     <TodoItems item={item}/>

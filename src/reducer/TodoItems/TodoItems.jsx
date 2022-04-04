@@ -1,7 +1,6 @@
 import './TodoItems.style.css'
 import {useContext} from "react";
 import {TodoContext} from "../Context/TodoContext";
-import {Button} from "react-bootstrap";
 import {Checkbox} from "@mui/material";
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
@@ -17,9 +16,9 @@ const TodoItems = ({item}) => {
     };
     return (
         item.items.map((i) => (
-            <div className={'TodoItems'} style={{opacity: i.status === true ? '.6' : '',}}
+            <div className={'TodoItems'}
                  key={`${i.id}-${i.id}`}>
-                <div>
+                <div className={"items"}>
                     <Checkbox
                         checked={item.status}
                         onChange={(e) => handleUpdateTodoItemsStatus(item.id, i.id, e)}
@@ -35,19 +34,17 @@ const TodoItems = ({item}) => {
                     />
                     <label
                         style={{
-                            color: i.status === true ? 'green' : 'black',
+                            color: i.status === true ? 'gray' : 'black',
                             textDecoration: i.status === true ? 'line-through' : 'none'
                             , marginLeft: '5px'
                         }}
                         htmlFor={`${item.id} + ${i.id}`}>{i.title}</label>
                 </div>
-
-                <Button variant="danger"
-                        onClick={() => handleDeleteTodoItems(item.id, i.id)}>
-                    <img
-                        src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/20/000000/external-delete-basic-ui-elements-flatart-icons-outline-flatarticons.png"
-                        alt={""}/>
-                </Button>
+                <div className={"deleteIcon"}>
+                    <img onClick={() => handleDeleteTodoItems(item.id, i.id)}
+                         src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/28/000000/external-delete-basic-ui-elements-flatart-icons-outline-flatarticons.png"
+                         alt={""}/>
+                </div>
             </div>
 
         ))

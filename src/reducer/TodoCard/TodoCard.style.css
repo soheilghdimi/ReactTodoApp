@@ -13,7 +13,7 @@
     margin: 10px;
     padding-top: 0;
     color: #DFCCF0;
-    width: 60vw;
+    width: 55vw;
 }
 h1{
     margin: 0;
@@ -25,48 +25,38 @@ h1{
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 200px;
+    height: 240px;
     color: rgba(229, 198, 198, 0.96);
     position: absolute;
     z-index: -1;
 }
 .name{
-background-color: #e9ebee;
+    background-color: #e9ebee;
     width: 348px;
-}
-.name:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 45px;
-    width: 55vw;
-    transition: ease 0.5s;
+    height: 55px;
 }
 .FormBox{
-    background-color: white;
-    box-shadow: 1px 1px 5px 5px #888888;
-    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
     padding: 10px;
     border-radius: 10px;
 }
 .formEntry {
-    display: block;
-    margin: 4px auto;
-    padding: 8px;
-    border-radius: 10px;
-    border: 1px solid #d3bbbb;
+    padding: 6px;
+    border-radius: 5px;
     transition: all 0.5s ease 0s;
     width: 50vw;
 }
 .add {
-    width: 130px ;
-    color: white;
-    background-color: #0e3721;
+    width: 80px ;
+    color: #070303;
+    background-color: #e5ece7;
     font-size: 20px;
 }
 .add:hover {
-    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
-    transform: translateY(-3px);
-    width: 150px;
-    border-top: 5px solid #0e3750;
+    transform: translateY(-1px);
+    width: 85px;
     border-radius: 5%;
 }
 @media only screen and (max-width: 550px) {

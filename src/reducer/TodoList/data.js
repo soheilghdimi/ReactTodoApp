@@ -19,18 +19,18 @@ const data = [
     },
     {
         id: 2,
-        name: "buy List",
-        description: "item's need for home",
+        name: "Exercise",
+        description: "Gym",
         items:
             [
                 {
                     id: 1,
-                    title: "milk",
+                    title: "Protein",
                     status: false
                 },
                 {
                     id: 2,
-                    title: "chips",
+                    title: "potato",
                     status: false
                 }
             ]
