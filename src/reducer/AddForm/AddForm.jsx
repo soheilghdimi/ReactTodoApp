@@ -4,7 +4,7 @@ import {TodoContext} from "../Context/TodoContext";
 import {useNavigate} from "react-router-dom";
 
 const AddForm = () => {
-    const {todoList, dispatch} = useContext(TodoContext);
+    const {dispatch} = useContext(TodoContext);
     const [todo, setTodo] = useState(
         {
             name: '',
@@ -47,13 +47,13 @@ const AddForm = () => {
                 <form onSubmit={handleAddTodo}>
                     <div className="input-container ic1">
                         <input className="input" onChange={handleChange} id='name' name={'name'}
-                               value={todoList.name}/>
+                               value={todo.name}/>
                         <div className="cut">{}</div>
                         <label className="placeholder">name</label>
                     </div>
                     <div className="input-container ic2">
                         <input className="input" onChange={handleChange} id='description' name={'description'}
-                               value={todoList.description}/>
+                               value={todo.description}/>
                         <div className="cut">{}</div>
                         <label className="placeholder">description</label>
                     </div>
