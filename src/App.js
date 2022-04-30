@@ -1,8 +1,8 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import TodoContextProvider from "./reducer/Context/TodoContext";
-import AddForm from "./reducer/AddForm/AddForm";
-import TodoList from "./reducer/TodoList/TodoList";
-import TodoCard from "./reducer/TodoCard/TodoCard";
+import TodoContextProvider from "./components/context/TodoContext";
+import TodoAddForm from "./components/todoAddForm/TodoAddForm";
+import TodoList from "./components/todoList/TodoList";
+import TodoChecklist from "./components/todoChecklist/TodoChecklist";
 
 const App = () => {
     return (
@@ -10,9 +10,9 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path={'/'} element={<TodoList/>}>
-                        <Route path={'/Add'} element={<AddForm/>}/>
+                        <Route path={'/Add'} element={<TodoAddForm/>}/>
                     </Route>
-                    <Route path={'todoCards/:id'} element={<TodoCard/>}/>
+                    <Route path={'todoCards/:id'} element={<TodoChecklist/>}/>
                 </Routes>
             </BrowserRouter>
         </TodoContextProvider>

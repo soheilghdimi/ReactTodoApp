@@ -1,9 +1,9 @@
-import './AddForm.style.css'
+import './TodoAddForm.style.css'
 import {useContext, useState} from "react";
-import {TodoContext} from "../Context/TodoContext";
+import {TodoContext} from "../context/TodoContext";
 import {useNavigate} from "react-router-dom";
 
-const AddForm = () => {
+const TodoAddForm = () => {
     const {dispatch} = useContext(TodoContext);
     const [todo, setTodo] = useState(
         {
@@ -16,7 +16,7 @@ const AddForm = () => {
     const handleAddTodo = (e) => {
         e.preventDefault()
         if (todo.name === "" || todo.description === "") {
-            alert("please fill the blank")
+            alert("Please fill in the blank")
         } else {
             dispatch({type: "AddTodo", payload: {todo}})
         }
@@ -39,8 +39,8 @@ const AddForm = () => {
         }}>
             <div className="form">
                 <div style={{display: "flex", justifyContent: 'flex-end'}}>
-                    <button onClick={() => navigate('/')}>
-                        <img className={"DeleteBtn"} src="https://img.icons8.com/fluency/48/000000/delete-sign.png"
+                    <button className="deleteBtn" onClick={() => navigate('/')}>
+                        <img className={"deleteImg"} src="https://img.icons8.com/fluency/48/000000/delete-sign.png"
                              alt={'DeleteButton'}/>
                     </button>
                 </div>
@@ -63,4 +63,4 @@ const AddForm = () => {
         </div>
     )
 }
-export default AddForm;
+export default TodoAddForm;

@@ -1,4 +1,4 @@
-import {makeUniqueId} from "../TodoList/data";
+import {makeUniqueId} from "../todoList/data";
 
 function Reducer(state, action) {
     const {type, payload} = action

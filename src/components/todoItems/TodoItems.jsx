@@ -1,6 +1,6 @@
 import './TodoItems.style.css'
 import {useContext} from "react";
-import {TodoContext} from "../Context/TodoContext";
+import {TodoContext} from "../context/TodoContext";
 import {Checkbox} from "@mui/material";
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';

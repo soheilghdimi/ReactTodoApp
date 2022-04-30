@@ -7,7 +7,12 @@
     width: 400px;
     margin-top: 10px;
 }
-.DeleteBtn{
+.deleteBtn {
+    border: none;
+    cursor: pointer;
+    background-color: unset;
+}
+.deleteImg{
     background: #15172b;
     width: 26px;
 }

@@ -1,5 +1,5 @@
 import {createContext, useReducer} from "react";
-import data from "../TodoList/data";
+import data from "../todoList/data";
 import reducer from "./Reducer";
 
 export const TodoContext = createContext({ todoList: [], dispatch: () => { } })
