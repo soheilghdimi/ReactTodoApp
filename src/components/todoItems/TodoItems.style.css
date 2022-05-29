@@ -1,21 +1,45 @@
-.TodoItems{
+.itemsContainer {
+    background-color: white;
+    position: relative;
+}
+
+.itemsBox {
+    min-height: 200px;
+}
+
+.todoItems {
     margin-top: 10px;
     display: flex !important;
     justify-content: space-between;
-    height: 60px;
+    height: 50px;
     align-items: center;
     padding: 8px;
     background-color: #ffffff;
     border-radius: 5px;
-    border: none;
+    border-bottom: 1px solid #d8e1e1;
 }
-.items{
+
+.items {
     display: flex;
     align-items: center;
 }
-p{
+
+p {
     margin-bottom: 0;
 }
-.deleteIcon{
-    cursor:pointer;
+
+.deleteIcon {
+    cursor: pointer;
+}
+
+.filterButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.itemsRemain {
+    position: absolute;
+    left: 10px;
+    bottom: 45px;
+    color: #6c6c8c;
 }

@@ -39,12 +39,10 @@ function Reducer(state, action) {
                                 ? {...item, status: payload.checked}
                                 : item
                         )
-
                     } : todo)
             )
         default : return state;
     }
-
 }
 
 export default Reducer;

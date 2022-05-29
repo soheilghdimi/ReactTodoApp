@@ -30,23 +30,25 @@ const TodoChecklist = () => {
             status: false
         }
     )
+
     const params = useParams()
+
     const handleAddTodoItems = (e) => {
         e.preventDefault()
         const id = item.id
-        if (task.title === "") {
-        } else {
-            dispatch({type: "AddTodoItems", payload: {id, task}})
-            setTask({
-                id: '',
-                title: "",
-                status: false
-            })
-        }
+        dispatch({type: "AddTodoItems", payload: {id, task}})
+        setTask({
+            id: '',
+            title: "",
+            status: false
+        })
     }
+
     const handleChangeItems = (e) => {
         setTask({...task, [e.target.name]: e.target.value})
     }
+
+
     useEffect(() => {
         setItem(todoList.filter(todo => todo.id === Number(params.id))[0])
     }, [todoList, params.id])
@@ -61,10 +63,12 @@ const TodoChecklist = () => {
                 <p>{item.description}</p>
             </div>
             <div className={'todoCard'}>
+
                 <div className={'formBox'}>
                     <form style={{display: "flex"}}>
-                        <input onChange={(e) => handleChangeItems(e)}
-                               value={task.title} className="name formEntry" placeholder={"Add items..."}/>
+                        <input onChange={e => handleChangeItems(e)}
+                               className="name formEntry" placeholder={"Add items..."} name={'title'}
+                               value={task.title}/>
                         <img onClick={handleAddTodoItems} className="add formEntry"
                              src="https://img.icons8.com/ios-filled/50/ffffff/plus-2-math.png"
                              alt={"Add"}/>
@@ -72,8 +76,8 @@ const TodoChecklist = () => {
                 </div>
                 <TodoItems item={item}/>
             </div>
-
         </div>
     )
 }
+
 export default TodoChecklist;
