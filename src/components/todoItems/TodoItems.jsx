@@ -7,7 +7,7 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import styled from "@emotion/styled";
 
 const FilterButton = styled(Button)`
-  margin: 20px;
+  margin: 20px 0 15px 20px;
   color: #617766;
 
   :hover {
